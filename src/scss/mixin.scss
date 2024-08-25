@@ -1,0 +1,68 @@
+$screen-xl-min: 1200px;
+$screen-lg-min: 992px;
+$screen-md-min: 768px;
+$screen-sm-min: 640px;
+$breakpoints: (
+  mobile: 320px,
+  large-mobile: 500px,
+);
+
+@mixin extra-large {
+  @media (max-width: #{$screen-xl-min}) {
+    @content;
+  }
+}
+
+@mixin large {
+  @media (max-width: #{$screen-lg-min}) {
+    @content;
+  }
+}
+
+@mixin medium {
+  @media (max-width: #{$screen-md-min}) {
+    @content;
+  }
+}
+
+@mixin small {
+  @media (max-width: #{$screen-sm-min}) {
+    @content;
+  }
+}
+
+@mixin custom($screen) {
+  @media (max-width: #{$screen + 'px'}) {
+    @content;
+  }
+}
+
+@mixin media($keys...) {
+  @each $key in $keys {
+    @media (max-width: map-get($breakpoints, $key)) {
+      @content;
+    }
+  }
+}
+@mixin header-line($width) {
+  display: block;
+  content: '';
+  width: $width;
+  height: 3px;
+  background: $white-color;
+  transform: translateY(22px);
+  transition: all $transition-duration;
+
+  @include medium {
+    transform: translateY(15px);
+  }
+}
+
+@mixin aside-line($width) {
+  display: block;
+  content: '';
+  width: $width;
+  height: 2px;
+  background: $white-color;
+  margin-top: 4px;
+}

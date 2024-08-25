@@ -1,0 +1,18 @@
+@import '../../scss/variable';
+
+.LinkBack {
+    display: flex;
+    align-items: center;
+    column-gap: 4px;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    background: transparent;
+    cursor: pointer;
+    margin-top: 41px;
+}
+.text {
+    color: $white-color;
+    font-size: 14px;
+    margin-top: 2px;
+}

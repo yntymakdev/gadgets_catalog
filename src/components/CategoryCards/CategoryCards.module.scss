@@ -1,0 +1,25 @@
+@import '../../scss/variable';
+@import '../../scss/mixin';
+
+.categories {
+  margin-top: 24px;
+  color: $white-color;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+
+  @include custom(540) {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.title {
+  font-size: 32px;
+  font-weight: 700;
+  margin-top: 80px;
+}
