@@ -6,46 +6,29 @@
 }
 
 .wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   gap: 40px 16px;
   margin-top: 24px;
 
   @include extra-large {
-    justify-content: space-around;
+    grid-template-columns: repeat(3, 1fr);
   }
 
   @include media {
-    justify-content: flex-start;
-
-    & > * {
-      flex: 0 0 229px;
-    }
+    grid-template-columns: repeat(3, 229px);
   }
 
   @include small {
-    justify-content: center;
-
-    & > * {
-      flex: 0 0 288px;
-    }
+    grid-template-columns: repeat(2, 288px);
   }
 
   @include custom(630) {
-    justify-content: space-between;
-
-    & > * {
-      flex: 0 0 calc(50% - 8px);
-    }
+    grid-template-columns: repeat(2, 1fr);
   }
 
   @include media(mobile, large-mobile) {
-    justify-content: center;
-
-    & > * {
-      flex: 0 0 100%;
-    }
+    grid-template-columns: repeat(1, 1fr);
 
     img {
       width: 100%;
