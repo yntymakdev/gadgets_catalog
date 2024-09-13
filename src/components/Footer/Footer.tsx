@@ -1,10 +1,10 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 
-import { logo } from '../../assets';
-import iconTop from '../../assets/images/arrow-right-primary.svg';
+import { logo } from "../../assets";
+import iconTop from "../../assets/images/arrow-right-primary.svg";
 
-import s from './Footer.module.scss';
-import { Link } from 'react-router-dom';
+import s from "./Footer.module.scss";
+import { Link } from "react-router-dom";
 
 export const Footer = () => {
   const [isScrollToTop, setIsScrollToTop] = useState(false);
@@ -17,7 +17,7 @@ export const Footer = () => {
     if (isScrollToTop) {
       setIsScrollToTop(false);
 
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+      window.scrollTo({ top: 0, behavior: "smooth" });
     }
   }, [isScrollToTop]);
 
@@ -31,7 +31,7 @@ export const Footer = () => {
 
           <ul className={s.socials}>
             <li className={s.item}>
-              <Link className={s.link} to="https://github.com/adikssl">
+              <Link className={s.link} to="https://github.com/yntymakdev">
                 Github
               </Link>
             </li>
